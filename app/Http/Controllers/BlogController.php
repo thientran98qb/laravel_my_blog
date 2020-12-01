@@ -47,7 +47,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $post=Post::whereId($id)->firstOrFail();
+        $comments = $post->comments()->get();
+        return view('blog.detail',compact('post','comments'));
     }
 
     /**

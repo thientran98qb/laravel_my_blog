@@ -12,7 +12,8 @@ class CommentController extends Controller
         $comment=Comment::create(
             [
                 'post_id'=>$request->post_id,
-                'content'=>$request->content
+                'content'=>$request->content,
+                'post_type'=>$request->post_type
             ]
         );
         if($comment){

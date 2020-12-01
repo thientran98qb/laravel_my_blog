@@ -67,6 +67,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin','as'=>'admin-','middlewar
     });
 });
 Route::get('/blog','BlogController@index')->name('blog-index');
+Route::get('/blog/detail/{id}','BlogController@show')->name('blog-detail');
 Route::get('welcome/{locale}',function($locale){
     App::setLocale($locale);
 });
