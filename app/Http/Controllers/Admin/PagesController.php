@@ -9,6 +9,7 @@ class PagesController extends Controller
 {
     public function home()
     {
+        echo "100";
         return view('backend.home');
     }
 }
